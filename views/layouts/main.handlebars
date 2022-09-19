@@ -9,19 +9,20 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="">
     <header class="bg-dark">
-        <nav class="ml-5 row bg-dark  text-light justify-space-between py-3">
-            <a href="/" class="font-weight-bold">Home</a>
+        <nav class="ml-5 row bg-dark text-light d-flex pt-3">
+            <a href="/" class="text-light font-weight-bold">Home</a>
+            <a href="/dashboard" class="text-light mx-5 font-weight-bold">Dashboard</a>
             {{#if loggedIn}}
-            <a href="/dashboard" class="col-2">Dashboard</a>
-            <button id="logout" class="btn col-2">Logout</button>
+              <a href="/" class="text-light font-weight-bold" id="logout">Logout</button>
             {{else}}
-            <a href="/login" class="ml-5 font-weight-bold">Login</a>
+              <a href="/login" class="text-light font-weight-bold">Login</a>
             {{/if}}
         </nav>
+
         <h1 class="row">
-            <a href="/" class="text-light col-4 ml-5 font-weight-bold pb-3">The Tech Blog</a>
+            <a href="/" class="text-light ml-5 col-12 font-weight-bold pb-3">The Tech Blog</a>
         </h1>
     </header>
     <main>
@@ -30,5 +31,7 @@
   </div>
 
 </body>
-
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
 </html>
