@@ -1,1 +1,7 @@
-<div>This is the homepage</div>
+<section>
+
+    {{#each posts as |post| }}
+        {{> post-info post}}
+    {{/each}}
+
+</section>
