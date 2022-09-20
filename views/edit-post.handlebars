@@ -1,17 +1,17 @@
-<div class="d-flex justify-content-center"
-    <div class="card row justify-content-center">
-        <div class="card-body col-6">
-
-            <h2 class="card-title col-6">Edit Post</h2>
-            
-            <div class="card-text col-6">
+<div class="d-flex justify-content-center row"
+    <div class="card justify-content-center">
+        <div class="card-body col-8">
+            <h2 class="card-title">Edit Post</h2>
+            <div class="card-text">
                 <form class="edit-post-form">
                     <div class="form-group">
-                        <input type="text" id="post-title" class="" name="post-title" value="{{post.title}}"/>
-                        <textarea name="post-text" class="">{{post.text}}</textarea>
+                        <input type="text" id="post-title" class="col-12" name="post-title" value="{{post.title}}"/>
+                        <textarea name="post-text" class="col-12 mt-3">{{post.text}}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark text-light">Save post</button>
-                    <button type="button" class="btn btn-dark text-light delete-post-btn">Delete post</button>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-dark col-3 mr-1 btn-lg text-light">Save post</button>
+                        <button type="button" class="btn btn-dark col-3 ml-1 btn-lg text-light delete-post-btn">Delete post</button>
+                    </div>
                 </form>
             </div>
         </div>
