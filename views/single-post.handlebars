@@ -1,15 +1,27 @@
-{{> post-info post}}
+<div class="row d-flex mt-4 justify-content-center">
+    <div class="col-8">
+        {{> post-info post}}
+    </div>
+</div>
+
+<div class="row d-flex justify-content-center">
+    <div class="col-7 mt-4">
+        {{> comments post.comments}}
+    </div>
+</div>
 
 {{#if loggedIn}}
-<form class="comment-form">
-    <div>
-        <textarea name="comment-body"></textarea>
-        <button type="submit">add comment</button>
+<div class="row d-flex justify-content-center">
+    <div class="col-7 mt-4">
+        <form class="comment-form">
+            <div>
+                <input type="text" name="comment-body h-100"></input>
+                <button type="submit" class="btn btn-dark btn-sm text-light">add comment</button>
+            </div>
+        </form>
+        {{/if}}
     </div>
-</form>
-{{/if}}
-
-{{> comments post.comments}}
+</div>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>

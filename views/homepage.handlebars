@@ -1,7 +1,15 @@
 <section>
-
-    {{#each posts as |post| }}
-        {{> post-info post}}
-    {{/each}}
-
+        <div class="bg-light d-flex flex-column justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-8 mt-3">
+                    <ul class="col-12 list-unstyled text-dark">
+                        {{#each posts as |post|}}
+                        <li class="text-dark mt-2">
+                            {{> post-info post}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
 </section>
